@@ -5,4 +5,8 @@ router.get('/', (req, res)=>{
     res.render("./index.ejs")
 })
 
+router.post('/submit-response', (req, res)=>{
+    
+})
+
 module.exports = router
