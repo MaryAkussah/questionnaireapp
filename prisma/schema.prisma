@@ -21,13 +21,25 @@ model Admin {
   phone     String?
 }
 
-model Response {
-  id                                            Int    @id @default(autoincrement())
-  email_address                                 String
-  applicant_name                                String
-  applicant_company_name                        String
-  company_address                               String
-  telephone_number                              String
+// File: ResponseMainModel.prisma
+model ResponseMain {
+  id                     Int    @id @default(autoincrement())
+  email_address          String
+  applicant_name         String
+  applicant_company_name String
+  company_address        String
+  telephone_number       String
+
+  // Relationships
+  sectionOne           ResponseSectionOne? @relation(fields: [responseSectionOneId], references: [id])
+  sectionTwo           ResponseSectionTwo? @relation(fields: [responseSectionTwoId], references: [id])
+  responseSectionOneId Int?
+  responseSectionTwoId Int?
+}
+
+model ResponseSectionOne {
+  id                                            Int            @id @default(autoincrement())
+  responseMainId                                Int            @unique
   revenue_sources                               String
   diversification                               String
   financial_strategy                            String
@@ -83,69 +95,76 @@ model Response {
   novel_solutions                               String
   patents_ips                                   String
   rd_initiatives                                String
-  local_economy_contribution                    String
-  community_engagement                          String
-  partnerships_collaborations                   String
-  startup_sustainability                        String
-  long_term_value_creation                      String
-  strategic_vision                              String
-  working_space                                 String
-  comfort_ambiance                              String
-  accessibility_wheelchair                      String
-  safety_equipment                              String
-  internet_connection                           String
-  necessary_hardware                            String
-  software_tools_availability                   String
-  power_reliability                             String
-  security_measures                             String
-  meeting_rooms                                 String
-  event_space                                   String
-  av_equipment_quality                          String
-  kitchen_facilities                            String
-  relaxation_recreation                         String
-  cleanliness_maintenance                       String
-  fulltime_staff                                String
-  staff_qualifications                          String
-  staff_turnover                                String
-  staff_training                                String
-  local_partners                                String
-  local_partnership_quality                     String
-  collaboration_outcome                         String
-  intl_partners                                 String
-  intl_partners_quality                         String
-  intl_collaboration_outcome                    String
-  network_participation                         String
-  international_network_participation           String
-  network_benefits                              String
-  alumni_network                                String
-  alumni_engagement                             String
-  alumni_success_stories                        String
-  governance_structure                          String
-  roles_responsibilities                        String
-  decision_making                               String
-  diversity_representation                      String
-  existence_clarity_policies                    String
-  alignment_legal_ethical_policies              String
-  effectiveness_policies_operations             String
-  review_update_policies                        String
-  compliance_legal_requirements                 String
-  risk_management_strategies                    String
-  risk_management_effectiveness                 String
-  legal_compliance_history                      String
-  stakeholder_engagement                        String
-  transparency_stakeholders                     String
-  responsiveness_feedback                       String
-  curriculum_entrepreneurship                   String
-  curriculum_comprehensiveness                  String
-  curriculum_alignment                          String
-  curriculum_innovation                         String
-  quality_of_trainers                           String
-  experiential_learning                         String
-  digital_tools_platforms                       String
-  learner_engagement                            String
-  assessment_techniques                         String
-  feedback_quality                              String
-  curriculum_effectiveness                      String
-  alumni_successes                              String
-  industry_feedback                             String
+  ResponseMain                                  ResponseMain[]
+}
+
+model ResponseSectionTwo {
+  id                                  Int            @id @default(autoincrement())
+  responseMainId                      Int            @unique
+  local_economy_contribution          String
+  community_engagement                String
+  partnerships_collaborations         String
+  startup_sustainability              String
+  long_term_value_creation            String
+  strategic_vision                    String
+  working_space                       String
+  comfort_ambiance                    String
+  accessibility_wheelchair            String
+  safety_equipment                    String
+  internet_connection                 String
+  necessary_hardware                  String
+  software_tools_availability         String
+  power_reliability                   String
+  security_measures                   String
+  meeting_rooms                       String
+  event_space                         String
+  av_equipment_quality                String
+  kitchen_facilities                  String
+  relaxation_recreation               String
+  cleanliness_maintenance             String
+  fulltime_staff                      String
+  staff_qualifications                String
+  staff_turnover                      String
+  staff_training                      String
+  local_partners                      String
+  local_partnership_quality           String
+  collaboration_outcome               String
+  intl_partners                       String
+  intl_partners_quality               String
+  intl_collaboration_outcome          String
+  network_participation               String
+  international_network_participation String
+  network_benefits                    String
+  alumni_network                      String
+  alumni_engagement                   String
+  alumni_success_stories              String
+  governance_structure                String
+  roles_responsibilities              String
+  decision_making                     String
+  diversity_representation            String
+  existence_clarity_policies          String
+  alignment_legal_ethical_policies    String
+  effectiveness_policies_operations   String
+  review_update_policies              String
+  compliance_legal_requirements       String
+  risk_management_strategies          String
+  risk_management_effectiveness       String
+  legal_compliance_history            String
+  stakeholder_engagement              String
+  transparency_stakeholders           String
+  responsiveness_feedback             String
+  curriculum_entrepreneurship         String
+  curriculum_comprehensiveness        String
+  curriculum_alignment                String
+  curriculum_innovation               String
+  quality_of_trainers                 String
+  experiential_learning               String
+  digital_tools_platforms             String
+  learner_engagement                  String
+  assessment_techniques               String
+  feedback_quality                    String
+  curriculum_effectiveness            String
+  alumni_successes                    String
+  industry_feedback                   String
+  ResponseMain                        ResponseMain[]
 }
