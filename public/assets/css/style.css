@@ -325,7 +325,7 @@ multistep css
 /*----------------------------------------------------*/
 .quiz-top-area {
   padding: 35px 0px;
-  background-color: #262626;
+  background-color: #246677;
 }
 .quiz-top-area h1 {
   color: #fff;
@@ -590,7 +590,7 @@ multistep css
   width: 100%;
 }
 .quiz-option-area .quiz-option-text {
-  color: #151515;
+  color: #25417e;
   font-size: 18px;
   padding: 20px 0px 20px 70px;
 }
@@ -611,6 +611,17 @@ multistep css
   max-width: 565px;
   font-weight: 700;
 }
+
+.image-row {
+  display: flex; /* Use flexbox to create a row */
+}
+
+.image-row img {
+  width: 350px; /* Set the width of each image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 30px; /* Add some margin between images */
+}
+
 
 /*---------------------------------------------------- */
 /*Responsive area*/

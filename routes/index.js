@@ -6,7 +6,7 @@ router.get('/', (req, res)=>{
 })
 
 router.post('/submit-response', (req, res)=>{
-    
+    console.table(req.body)
 })
 
 module.exports = router
