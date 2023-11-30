@@ -108,44 +108,5 @@ model Response {
   staff_qualifications                          String
   staff_turnover                                String
   staff_training                                String
-  local_partners                                String
-  local_partnership_quality                     String
-  collaboration_outcome                         String
-  intl_partners                                 String
-  intl_partners_quality                         String
-  intl_collaboration_outcome                    String
-  network_participation                         String
-  international_network_participation           String
-  network_benefits                              String
-  alumni_network                                String
-  alumni_engagement                             String
-  alumni_success_stories                        String
-  governance_structure                          String
-  roles_responsibilities                        String
-  decision_making                               String
-  diversity_representation                      String
-  existence_clarity_policies                    String
-  alignment_legal_ethical_policies              String
-  effectiveness_policies_operations             String
-  review_update_policies                        String
-  compliance_legal_requirements                 String
-  risk_management_strategies                    String
-  risk_management_effectiveness                 String
-  legal_compliance_history                      String
-  stakeholder_engagement                        String
-  transparency_stakeholders                     String
-  responsiveness_feedback                       String
-  curriculum_entrepreneurship                   String
-  curriculum_comprehensiveness                  String
-  curriculum_alignment                          String
-  curriculum_innovation                         String
-  quality_of_trainers                           String
-  experiential_learning                         String
-  digital_tools_platforms                       String
-  learner_engagement                            String
-  assessment_techniques                         String
-  feedback_quality                              String
-  curriculum_effectiveness                      String
-  alumni_successes                              String
-  industry_feedback                             String
+ 
 }
