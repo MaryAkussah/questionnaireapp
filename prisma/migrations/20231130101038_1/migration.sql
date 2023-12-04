@@ -22,6 +22,8 @@ CREATE TABLE `ResponseMain` (
     `applicant_company_name` VARCHAR(191) NOT NULL,
     `company_address` VARCHAR(191) NOT NULL,
     `telephone_number` VARCHAR(191) NOT NULL,
+    `responseSectionOneId` INTEGER NULL,
+    `responseSectionTwoId` INTEGER NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -165,7 +167,7 @@ CREATE TABLE `ResponseSectionTwo` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `ResponseSectionOne` ADD CONSTRAINT `ResponseSectionOne_responseMainId_fkey` FOREIGN KEY (`responseMainId`) REFERENCES `ResponseMain`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `ResponseMain` ADD CONSTRAINT `ResponseMain_responseSectionOneId_fkey` FOREIGN KEY (`responseSectionOneId`) REFERENCES `ResponseSectionOne`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `ResponseSectionTwo` ADD CONSTRAINT `ResponseSectionTwo_responseMainId_fkey` FOREIGN KEY (`responseMainId`) REFERENCES `ResponseMain`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `ResponseMain` ADD CONSTRAINT `ResponseMain_responseSectionTwoId_fkey` FOREIGN KEY (`responseSectionTwoId`) REFERENCES `ResponseSectionTwo`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
