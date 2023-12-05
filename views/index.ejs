@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 
 <body>
+	
 	<div class="quiz-top-area text-center">
 		<img src="../assets/img/logo.png" class="logo">
 		<h1>SME ACCELERATION DIAGNOSTIC TOOL</h1>
@@ -102,9 +103,9 @@ You can save and continue later, we however entreat all SME to ensure they meet 
 
 Your responses are strictly confidential. 
 
-Yours Sincerely 
+Yours Sincerely, 
 
-Waltergates Tech Innovation Hub
+Waltergates Tech Innovation Hub.
 													</h5>
 												</div>
 
@@ -215,7 +216,7 @@ Waltergates Tech Innovation Hub
 													</div>
 												</div>
 											</div>
-											<p>POWERED BY <img src="../assets/img/Untitled design.png"alt class="flogo" ></p>
+											<p>POWERED BY <img src="../assets/img/thumbnail_wgghana_logo-removebg-preview.png"alt class="flogo" ></p>
 										</div>
 									</section>
 									<!-- Section: Design Block -->
@@ -229,6 +230,9 @@ Waltergates Tech Innovation Hub
 									<img src="../assets/img/Untitled design.png" alt="Image 3">
 
 								</div>
+
+
+
 
 								<!-- 									
 									<div class="bottom-vector">
@@ -6605,6 +6609,38 @@ Waltergates Tech Innovation Hub
 			</div>
 		</div>
 	</div>
+
+	<script>
+		function saveProgress() {
+		  // Get form data
+		  var surveyData = {
+			q1: document.getElementById('q1').value,
+			q2: document.getElementById('q2').value
+			// Add more questions and their values here
+		  };
+		
+		  // Save survey data to localStorage
+		  localStorage.setItem('surveyData', JSON.stringify(surveyData));
+		
+		  // Show a confirmation message to the user
+		  alert('Survey progress saved! You can continue later.');
+		}
+		</script>
+<script>
+		// Check if there are saved survey responses in localStorage when the page loads
+window.onload = function() {
+  var savedSurveyData = localStorage.getItem('surveyData');
+  if (savedSurveyData) {
+    var parsedSurveyData = JSON.parse(savedSurveyData);
+
+    // Populate form fields with saved survey responses
+    document.getElementById('q1').value = parsedSurveyData.q1;
+    document.getElementById('q2').value = parsedSurveyData.q2;
+    // Add more questions and their values here
+  }
+};
+
+		</script>
 
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
