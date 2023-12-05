@@ -333,14 +333,14 @@ multistep css
 
 .quiz-top-area .logo {
   width: 200px; /* Set your desired width for the logo */
-  height: 30px;
+  height: 100px;
   margin-right: 10px; /* Adjust margin between logo and text */
   
 }
 
 
 .quiz-top-area {
-  padding: 35px 0px;
+  padding: 20px 0px;
   background-color: #246677;
   display: flex;
   align-items: center;
