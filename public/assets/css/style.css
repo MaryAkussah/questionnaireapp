@@ -324,6 +324,8 @@ multistep css
 }
 
 /*---------------------------------------------------- */
+
+
 /*inner area*/
 /*----------------------------------------------------*/
 .flogo{
@@ -643,8 +645,8 @@ multistep css
 }
 
 .image-row img {
-  width: 300px; /* Set the width of each image */
-  height: auto; /* Maintain aspect ratio */
+  width: 200px; /* Set the width of each image */
+  height: 200px; /* Maintain aspect ratio */
   margin: 30px; /* Add some margin between images */
 }
 
