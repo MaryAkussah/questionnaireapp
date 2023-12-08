@@ -160,6 +160,17 @@ router.post("/submit-response", async (req, res) => {
             data: responseSectionTwoData,
         });
 
+        // Update user
+        const updateResponseMain = await prisma.responseMain.update({
+            where: {
+                id: createdResponseMain.id
+            },
+            data: {
+                responseSectionOneId: createdResponseSectionOneData.id,
+                responseSectionTwoId: createdResponseSectionOneData.id
+            },
+        });
+
         res.redirect('/thank-you')
 
     } catch (error) {
