@@ -281,6 +281,14 @@ multistep css
   border: none;
 }
 
+.save-continue-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
 
 .quiz-progress-area .progress {
   left: 0;
