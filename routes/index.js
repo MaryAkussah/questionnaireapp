@@ -167,7 +167,7 @@ router.post("/submit-response", async (req, res) => {
             },
             data: {
                 responseSectionOneId: createdResponseSectionOneData.id,
-                responseSectionTwoId: createdResponseSectionOneData.id
+                responseSectionTwoId: createdResponseSectionTwoData.id
             },
         });
 
