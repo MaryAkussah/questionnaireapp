@@ -252,16 +252,16 @@ Waltergates Tech Innovation SME
 							   </ol>
 							   <div class="carousel-inner">
 								   <div class="carousel-item active">
-									   <img class="d-block w-30" src= "  ../assets/img/Untitled design (1).png" alt="Second slide">
+									   <img class="d-block w-30" src= "  ../assets/img/Untitled design (1).png" style="width:120px; height:70px;" alt="Second slide">
 								   </div>
 								   <div class="carousel-item">
-									   <img class="d-block w-30" src= "../assets/img/Untitled design (2).png"	alt="First slide">
+									   <img class="d-block w-30" src= "../assets/img/Untitled design (2).png" style="width:120px; height:70px;"	alt="First slide">
 								   </div>
 								   <div class="carousel-item" id="image2">
-									   <img class="d-block w-5" src="../assets/img/Untitled design (4).png"	alt="Third slide">
+									   <img class="d-block w-5" src="../assets/img/Untitled design (4).png"	 style="width:120px; height:70px;" alt="Third slide">
 								   </div>
 								   <div class="carousel-item" id="image2">
-									<img class="d-block w-5" src="../assets/img/Untitled design.png"	alt="Third slide">
+									<img class="d-block w-5" src="../assets/img/Untitled design.png" style="width:120px; height:70px;"	alt="Third slide">
 								</div>
 							   </div>
 							   <a class="carousel-control-prev"
@@ -315,7 +315,17 @@ Waltergates Tech Innovation SME
 									</div>
 									 -->
 								<div class="actions clearfix">
-									<ul>
+									<select id="dropdown" onchange="navigateToSection()">
+										<option value="1"> 1</option>
+										<option value="2"> 2</option>
+										<option value="3"> 3</option>
+										<option value="4"> 4</option>
+										<option value="5"> 5</option>
+									  </select>
+									  <!-- Dropdown list of numbers -->
+
+									  
+
 										<li class="d-none"><span class="js-btn-next" title="PREV">Previous
 												Question</span></li>
 										<li><span class="js-btn-next" title="NEXT">Next </span></li>
@@ -325,12 +335,12 @@ Waltergates Tech Innovation SME
 						</div>
 						<!-- step 1 -->
 						<!-- Question 1 -->
-						<div class="multisteps-form__panel" data-animation="fadeIn">
+						<div class="multisteps-form__panel" data-animation="fadeIn"  id="section1">
 							<div class="wizard-forms">
-								<div class="quiz-title text-center">
+								<div class="quiz-title text-center" >
 									<h3>1.Business model - Revenue sources</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
-									<h5>"This SME showcases proficiency in predicting future income and effectively acquiring revenue from these different channels, indicating a strategic understanding of revenue generation".
+									<h5>Please select the responses that best suits the statement below</h5>
+									<h5>"This SME showcases proficiency in predicting future income and effectivelycquiring revenue from these different channels, indicating a strategic understanding of revenue generation".
 
 									</h5>
 								</div>
@@ -393,11 +403,11 @@ Waltergates Tech Innovation SME
 							</div>
 						</div>
 						<!-- Question 2 -->
-						<div class="multisteps-form__panel" data-animation="fadeIn">
+						<div class="multisteps-form__panel" data-animation="fadeIn" id="section2">
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>2.Business model - Diversification</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME derives its revenue from multiple sources".</h5>
 									<!-- <h2>Start Quiz</h2> -->
@@ -454,11 +464,11 @@ Waltergates Tech Innovation SME
 							</div>
 						</div>
 						<!-- Question 3-->
-						<div class="multisteps-form__panel" data-animation="fadeIn">
+						<div class="multisteps-form__panel" data-animation="fadeIn" id="section3">
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>3.Financial Management - Financial strategy</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME has a specified financial strategy addressing vital aspects such as;<br>
 										 1.revenue generation <br>
@@ -470,10 +480,8 @@ Waltergates Tech Innovation SME
 										<input type="radio" name="financial_strategy" value="1"
 											class="exp-option-box" required>
 										<span class="select-area"></span>
-										<span>NOT SUFFICIENT - The SME has a defined financial strategy that covers key
-											areas including revenue generation and cost management. However, the plan
-											for long-term financial sustainability could be more detailed, or there may
-											be a lack of consistent implementation and follow-through.</span>
+										<span>NOT SUFFICIENT - The SME does not have a clearly defined financial strategy.Revenue generation and cost management efforts are not based on work plan and are short-term, and there's no clear plan for financial sustainability.
+											</span>
 									</label>
 									<label class="quiz-details-option position-relative">
 										<input type="radio" name="financial_strategy" value="2"
@@ -528,12 +536,12 @@ Waltergates Tech Innovation SME
 							</div>
 						</div>
 						<!-- Question 4 -->
-						<div class="multisteps-form__panel" data-animation="fadeIn">
+						<div class="multisteps-form__panel" data-animation="fadeIn" id="section4">
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 
 									<h3>4.Financial Management - Budget Management</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME has an established framework for budget planning and management aligned with strategic objectives".</h5>
 								</div>
@@ -542,47 +550,36 @@ Waltergates Tech Innovation SME
 										<input type="radio" name="budget_management" value="1"
 											class="exp-option-box" required>
 										<span class="select-area"></span>
-										<span>NOT SUFFICIENT - The SME has a defined financial strategy that covers key
-											areas including revenue generation and cost management. However, the plan
-											for long-term financial sustainability could be more detailed, or there may
-											be a lack of consistent implementation and follow-through.</span>
+										<span>NOT SUFFICIENT - The SME does not have a systematic approach to budget planning and management. There's no clear understanding or tracking of income and expenses, and/or spending frequently exceeds the budget.
+										</span>
 									</label>
 									<label class="quiz-details-option position-relative">
 										<input type="radio" name="budget_management" value="2"
 											class="exp-option-box">
 										<span class="select-area"></span>
-										<span>WEAK - The SME has some elements of a financial strategy, but it is not
-											comprehensive. Some areas like revenue generation or cost management may be
-											addressed, but without a clear connection to long-term financial
-											sustainability.</span>
+										<span>WEAK - The SME has a basic system for budget management, but it's not consistently implemented. Budget planning may not be linked to strategic goals, and/or there may be issues with overspending or lack of transparency.
+										</span>
 									</label>
 									<label class="quiz-details-option position-relative">
 										<input type="radio" name="budget_management" value="3"
 											class="exp-option-box">
 										<span class="select-area"></span>
-										<span>AVERAGE - The SME has a defined financial strategy that covers key areas
-											including revenue generation and cost management. However, the plan for
-											long-term financial sustainability could be more detailed, or there may be a
-											lack of consistent implementation and follow-through.</span>
+										<span>AVERAGE - The SME has a defined system for budget planning and management, which is linked to strategic goals. However, there may be issues with accuracy, timeliness, or compliance, and/or room for improvement in cost efficiency or transparency.
+										</span>
 									</label>
 									<label class="quiz-details-option position-relative">
 										<input type="radio" name="budget_management" value="4"
 											class="exp-option-box">
 										<span class="select-area"></span>
-										<span>GOOD - The SME's financial strategy is well-defined and covers all key
-											areas. The strategy is regularly reviewed and updated, and there's clear
-											evidence of effective implementation. However, there may be room for more
-											innovative or forward-looking approaches.</span>
+										<span>GOOD - The SME's budget planning and management system is well-organized, accurate, and transparent. It's clearly linked to strategic goals and regularly monitored, but there may still be occasional issues or room for more advanced techniques or software use.
+										</span>
 									</label>
 									<label class="quiz-details-option position-relative">
 										<input type="radio" name="budget_management" value="5"
 											class="exp-option-box">
 										<span class="select-area"></span>
-										<span>EXCELLENT - The SME's financial strategy is comprehensive, regularly
-											updated, and effectively implemented. The strategy considers current and
-											future financial trends and uses innovative approaches for income generation
-											and cost management. The SME demonstrates a strong commitment to long-term
-											financial sustainability.</span>
+										<span>EXCELLENT - The SME's budget management is exemplary. The process is systematic, transparent, and directly tied to strategic goals. Advanced techniques or software are used to increase accuracy and efficiency, and budget compliance is near-perfect.
+										</span>
 									</label>
 
 								</div>
@@ -601,12 +598,12 @@ Waltergates Tech Innovation SME
 							</div>
 						</div>
 						<!-- Question 5 -->
-						<div class="multisteps-form__panel" data-animation="fadeIn">
+						<div class="multisteps-form__panel" data-animation="fadeIn" id="section5">
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 
 									<h3>5.Financial Management - Financial reporting</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Consistent financial reports are regularly compiled and are generally reliable in their accuracy".</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -668,7 +665,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 
 									<h3>6.Funding - Grant Acquisition</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME occasionally pursues grants without a well-defined approach or a steady success rate".</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -731,7 +728,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 
 									<h3>7.Funding - Investor Attraction</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME maintains connections with investors".</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -791,7 +788,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>8.Sustainability - Reserves and continuity planning</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME possesses limited reserves ".</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -861,7 +858,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 
 									<h3>9.Sustainability - Sustainability plan</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME has a robust and all-encompassing sustainability plan, being executed proficiently".</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -934,8 +931,8 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 
 									<h3>10.Strategy Formulation - Clear vision and mission</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
-									<h5>"The vision and mission statements of the SME are distinct, persuasive, and skillfully conveyed to stakeholders."</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
+									<h5>"The vision and mission statement of the SME are distinct, persuasive, and skillfully conveyed to stakeholders."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
 								<div class="quiz-option-selector">
@@ -964,7 +961,7 @@ Waltergates Tech Innovation SME
 										<input type="radio" name="clear_vision_and_mission" value="4"
 											class="exp-option-box">
 										<span class="select-area"></span>
-										<span>GOOD - The SME's vision and mission statements are clear, compelling, and effectively communicated to stakeholders. They are largely integrated into the SME's operations and culture, but there may be minor inconsistencies or areas for improvement.
+										<span>GOOD - The SME's vision and mission statement are clear, compelling, and effectively communicated to stakeholders. They are largely integrated into the SME's operations and culture, but there may be minor inconsistencies or areas for improvement.
 										</span>
 									</label>
 									<label class="quiz-details-option position-relative">
@@ -994,7 +991,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 
 									<h3>11.Strategy Formulation - Defined strategic goals</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME has established strategic goals that are directly tied to its vision and mission"</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1052,7 +1049,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>12.Strategy Formulation - Alignment with market trends</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME is generally attentive to market trends and frequently incorporates these insights into its strategy and services"</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1112,7 +1109,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>13.Strategy Formulation - Innovation driven strategy</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME exhibits a commendable dedication to cultivating innovation, evident in its strategic plans, services, and activities"</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1179,7 +1176,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>14.Strategy Implementation - Implementation plan and execution</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME has an acceptable implementation plan that holds a reasonable level of detail."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1248,7 +1245,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>15.Strategy Implementation - Resource allocation</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME has a rudimentary resource allocation strategy"</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1313,7 +1310,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>16.Strategy Implementation - Monitoring and control mechanisms</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME has adequate monitoring and control mechanisms in place. They can track the progress of most strategic initiatives and address some identified issues."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1384,7 +1381,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 									<h3>17.Strategy Implementation -Responsiveness to changes</h3>
 
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME adeptly adapts to environmental changes and seamlessly incorporates these adaptations into its strategic planning. It consistently reviews and modifies its strategy in response to external changes."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1450,7 +1447,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>18.Strategy Evaluation - Regular review and update of strategy</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME typically conducts regular reviews and updates of its strategy."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1516,7 +1513,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>19. Strategy Evaluation - Performance against strategic goals</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The SME consistently evaluates its performance against strategic goals, yielding varied results where some goals are achieved "</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1585,7 +1582,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>20. Strategy Evaluation - Use of feedback in strategic revision</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"The feedback collection process is utilized to some extent in revising the strategy .</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1653,7 +1650,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>21. Strategy Involvement - Stakeholder Identification</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of how stakeholders are identified and involved in the SME's strategy development and implementation."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1721,7 +1718,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>22. Strategy Involvement - Stakeholder Engagement in Strategy</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of stakeholder involvement in the SME's strategic planning and decision-making processes."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1789,7 +1786,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>23. Strategy Involvement - Responsiveness to Stakeholder Feedback</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of how effectively the SME responds to stakeholder feedback in its operations and strategic decisions."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1856,7 +1853,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>24. Leadership and Governance - Clarity of Leadership Roles</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the clarity and definition of leadership roles within the SME."
 									</h5>
 									<!-- <h2>Start Quiz</h2> -->
@@ -1924,7 +1921,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>25. Leadership and Governance - Effectiveness of Leadership</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the effectiveness of leadership in decision-making, implementing strategies, and influencing teams within the organization."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -1990,7 +1987,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 									<h3>26. Leadership and Governance - Transparency and Accountability in Governance
 									</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the transparency and accountability in governance practices within the organization."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -2057,7 +2054,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>27. Leadership and Governance - Inclusiveness in Decision-Making Process</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the inclusiveness of the decision-making process within the organization."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -2122,7 +2119,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>28. People Management - Staff Motivation and Morale</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the motivation levels and morale among the staff within the organization."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -2190,7 +2187,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>29. People Management - Staff Competence</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the competence, skills, and professional development of staff members within the organization."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -2252,7 +2249,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>30. People Management - Clear Job Description and Role Expectations</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the clarity and effectiveness of job descriptions and role expectations within the organization."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -2320,7 +2317,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>31. People Management - Ongoing Training and Development</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the continuous training and development opportunities provided within the organization."</h5>
 									<!-- <h2>Start Quiz</h2> -->
 								</div>
@@ -2387,7 +2384,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>32. Operations Management - Efficiency of operations</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of operational efficiency and ongoing improvement initiatives within the SME."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -2451,7 +2448,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>33. Operations Management - Quality control systems</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the effectiveness of the quality control system implemented by the SME."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -2516,7 +2513,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>34. Operations Management - Use of technology</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Evaluation of the utilization of technology by the SME in its day-to-day operations."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -2577,7 +2574,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>35. Operations Management - Risk management</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the risk management system employed by the SME."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -2638,7 +2635,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>36. Performance Management - Performance evaluation system</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the SME's system for evaluating performance."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -2706,7 +2703,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>37. Performance Management - Use of performance feedback for improvement</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the organization's use of performance feedback as a means for improvement."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -2771,7 +2768,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>38. Performance Management - Reward and recognition system</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the organization's reward and recognition system and its influence on employee motivation and engagement."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -2837,7 +2834,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>39. Service Variety - Range of services offered</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the range and depth of services offered by the SME for entrepreneurial support."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -2898,7 +2895,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>40. Service Variety - Relevance of services to needs of start-ups</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the extent to which the services provided by the SME cater to the specific needs of the startups it supports."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -2961,7 +2958,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>41. Service Variety - Innovativeness of services</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the innovation and groundbreaking nature of the SME's services in providing support to startups."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -3026,7 +3023,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>42. Service Quality - Quality of services delivered</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the quality of services rendered by the SME to startups."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -3091,7 +3088,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>43. Service Quality - Timeliness of services</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the SME's reliability in consistently delivering services punctually to startups."
 									</h5>
 								</div>
@@ -3159,7 +3156,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>44. Service Quality - Responsiveness to service issues</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the SME's promptness in addressing service issues reported by startups."
 									</h5>
 								</div>
@@ -3228,7 +3225,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>45. Service Accessibility - Accessibility of services</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the accessibility of services offered by the SME for startups."
 									</h5>
 								</div>
@@ -3295,7 +3292,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>46. Service Accessibility - Use of technology in service delivery</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the SME's utilization of technology in service delivery and its influence on efficiency, accessibility, and user experience."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -3361,7 +3358,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>47. Service Impact - Evidence of service impact</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the evidence and methodologies employed by the SME to measure the impact of its services on start-ups and the broader entrepreneurship ecosystem."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -3425,7 +3422,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>48. Service Impact - Feedback mechanism and its utilization</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the feedback collection system's effectiveness in initiating changes and improvements within the SME's services and operations."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -3491,7 +3488,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>49. Service Impact - Regular review and improvement of services</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>Evaluation of the SME's process for regularly reviewing its services and
 										translating insights into improvements.</h5>
 								</div>
@@ -3558,7 +3555,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>50. Direct Impact - Number of start-ups supported</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>Evaluation of the SME's support for startups in relation to their capacity and
 										reach within the startup ecosystem.</h5>
 								</div>
@@ -3623,7 +3620,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>51. Direct Impact - Job creation</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the SME's supported startups and their influence on job creation."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -3684,7 +3681,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>52. Direct Impact - Revenue growth for supported start-ups</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 									<h5>"Assessment of the revenue growth exhibited by the supported start-ups."</h5>
 								</div>
 								<div class="quiz-option-selector">
@@ -3748,7 +3745,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>53. Innovation Impact - Novel solutions and product developed</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the number and significance of patents or intellectual properties (IPs) created by supported start-ups, reflecting the SME's commitment to fostering innovation and protecting intellectual property rights."</h5>
 								</div>
@@ -3814,7 +3811,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>54. Innovation Impact - Number of patents/IPs generated</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Evaluation of the level of patents or IPs generated by supported start-ups,
 										indicating the SME's support for innovation and IP protection".</h5>
@@ -3880,7 +3877,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>55. Innovation Impact - R&D Initiatives</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the SME's Research and Development (R&D) endeavors, taking into account their scope, regularity, depth, and resulting outcomes."</h5>
 								</div>
@@ -3946,7 +3943,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>56. Ecosystem Impact - Contribution to local economy</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the SME's influence on the local economy, including aspects such as job creation, fostering startup growth, investment, and its overall impact on the economic landscape."</h5>
 								</div>
@@ -4013,7 +4010,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>57. Ecosystem Impact - Engagement with local communities</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the SME's involvement with the local community, taking into account events, partnerships, feedback mechanisms, and initiatives aimed at supporting community needs."
 									</h5>
@@ -4086,7 +4083,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>58. Ecosystem Impact - Development of partnerships and collaborations</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the SME's strategy in forming formal partnerships, collaborations, and joint initiatives with other organizations, considering the depth of engagement, strategic utilization, and resultant impact."</h5>
 								</div>
@@ -4158,7 +4155,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>59. Long-term Impact - Sustainability of supported start-ups</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the sustainability strategies, revenue sources, and reliance of supported startups on the assistance provided by the SME."</h5>
 								</div>
@@ -4225,7 +4222,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>60. Long-term Impact - Long-term value creation</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>Evaluation of the potential for creating long-term value among the supported startups, considering factors such as market disruption, scalability of solutions, and the societal or industry impact."</h5>
 								</div>
@@ -4292,7 +4289,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>61. Long-term Impact - Strategic vision for future impact</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Evaluation of the SME's strategic vision for future impact and its implementation plans."</h5>
 								</div>
@@ -4358,7 +4355,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>62. Physical Facilities - Adequacy of working space</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Evaluation of the sufficiency and comfort of the working space provided by the SME."</h5>
 								</div>
@@ -4425,7 +4422,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>63. Physical Facilities - Comfort and physical ambiance</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Evaluation of the comfort and ergonomic features within the SME's workspace."</h5>
 								</div>
@@ -4493,7 +4490,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>64. Physical Facilities - Accessibility (wheelchair friendly)</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Evaluation of the SME's workspace accessibility for individuals with disabilities, focusing particularly on wheelchair accessibility."</h5>
 								</div>
@@ -4564,7 +4561,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>65. Physical Facilities - Safety measures and equipment</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Evaluation of safety measures and equipment available within the workspace."</h5>
 								</div>
@@ -4635,7 +4632,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>66. Technical Infrastructure - Quality of internet connection</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the quality and reliability of the internet connection provided by
 										the SME."</h5>
@@ -4706,7 +4703,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>67. Technical Infrastructure - Availability of necessary hardware</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the accessibility and excellence of hardware equipment provided by the SME."</h5>
 								</div>
@@ -4773,7 +4770,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>68. Technical Infrastructure - Software and digital tools availability</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the breadth and sufficiency of software and digital tools offered by the SME.".</h5>
 								</div>
@@ -4843,7 +4840,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>69. Technical Infrastructure - Power reliability</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the dependability of the SME's power supply and the efficacy of backup power solutions in place."</h5>
 								</div>
@@ -4908,7 +4905,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>70. Technical Infrastructure - Adequacy of technological security measures</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>Assessing the effectiveness and extent of cybersecurity measures employed by the SME, encompassing network security, firewalls, antivirus systems, employee training, and data protection protocols.
 									</h5>
@@ -4980,7 +4977,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>71. Meeting and Event Spaces - Adequacy of meeting rooms</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the availability and quality of meeting rooms within the SME, considering their equipped technology, facilities, and suitability for various meeting requirements."</h5>
 								</div>
@@ -5047,7 +5044,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 									<h3>72. Meeting and Event Spaces - Event space for workshops, presentations, etc
 									</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the quality, adaptability, and features of the dedicated space provided by the SME for hosting events, considering its capacity, versatility, and equipped facilities suitable for workshops, presentations, and networking activities of various kinds."</h5>
 								</div>
@@ -5115,7 +5112,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>73. Meeting and Event Spaces - Quality of audio visual equipment</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>Assessing the quality and capacity of the audio-visual (AV) equipment available at the SME for hosting diverse events, considering its reliability, features, and suitability for various event formats.</h5>
 								</div>
@@ -5185,7 +5182,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>74. Other Amenities - Availability of kitchen facilities</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the quality and suitability of relaxation and recreation areas within the SME, taking into account comfort, available amenities, and cleanliness."</h5>
 								</div>
@@ -5251,7 +5248,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>75. Other Amenities - Relaxation and recreation areas</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the quality and suitability of relaxation and recreation areas within the SME, taking into account comfort, available amenities, and cleanliness."</h5>
 								</div>
@@ -5316,7 +5313,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>76. Other Amenities - Cleanliness and maintenance</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the cleanliness and maintenance standards at the SME, considering the frequency, thoroughness, and responsiveness to maintenance issues."</h5>
 								</div>
@@ -5382,7 +5379,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>77. Human Resources - Number of fulltime staff</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing whether the full-time staff is sufficient in managing daily operations and preventing disruptions in services."</h5>
 								</div>
@@ -5447,7 +5444,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>78. Human Resources - Staff qualifications and expertise</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the impact of staff qualifications and expertise on the quality of services provided".</h5>
 								</div>
@@ -5516,7 +5513,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>79. Human Resources - Staff turnover rate</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the impact of staff turnover rate on work conditions and the continuity of services within the organization."</h5>
 								</div>
@@ -5645,7 +5642,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>81. Local Partnerships - Number of local partners</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the extent of local partnerships and networking within the small and medium-sized enterprise (SME)'s local ecosystem."</h5>
 								</div>
@@ -5704,7 +5701,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>82. Local Partnerships - Quality of local partnerships</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the caliber and significance of the small and medium-sized enterprise (SME)'s partnerships within the local context."</h5>
 								</div>
@@ -5770,7 +5767,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>83. Local Partnerships - Collaboration outcome with local partners</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the results derived from the cooperation between the SME and its local partners."</h5>
 								</div>
@@ -5837,7 +5834,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>84. International Partnerships - Number of international partners</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the involvement and alliances of small and medium-sized enterprises (SMEs) with international entities."
 									</h5>
@@ -5902,7 +5899,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>85. International Partnerships - Quality of international partnerships</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the extent and advantages of international collaborations for small and medium-sized enterprises (SMEs)."
 									</h5>
@@ -5974,7 +5971,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 									<h3>86. International Partnerships - Collaboration outcome with international
 										partners</h3>
-										<h5>Please select the responses that best suits the statements below</h5>
+										<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the successful collaborations or outcomes stemming from the SME's interactions with international partners."</h5>
 								</div>
@@ -6041,7 +6038,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>87. Networks - Participation in local/regional networks</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the SME's engagement in nearby or regional networks and the advantages reaped from these affiliations."</h5>
 								</div>
@@ -6110,7 +6107,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>88. Networks - Participation in international networks</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the SME's engagement in global networks and the advantages obtained from these affiliations."</h5>
 								</div>
@@ -6180,7 +6177,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>89. Networks - Benefits gained from network participation</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the advantages gained by the SME through its engagement in various networks."</h5>
 								</div>
@@ -6247,7 +6244,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>90. Alumni Network - Existence of alumni network</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the presence and involvement of an alumni network connected to the SME."</h5>
 								</div>
@@ -6311,7 +6308,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>91. Alumni Network - Engagement level of alumni</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the degree of involvement and active participation of the SME's alumni in SME-related activities."</h5>
 								</div>
@@ -6383,7 +6380,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>92. Alumni Network - Success stories of alumni network</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the methods used by the SME to gather and disseminate success stories from its alumni network."</h5>
 								</div>
@@ -6453,7 +6450,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>93. Governance Structure - Existence and clarity of governance structure</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>Assessment of the clarity and existence of the governance framework within the SME.</h5>
 								</div>
@@ -6518,7 +6515,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>94. Governance Structure - Roles and responsibilities of governance members</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Evaluation of the clarity and understanding of roles and responsibilities among
 										governance members".</h5>
@@ -6584,7 +6581,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 									<h3>95. Governance Structure - Effectiveness of governance system in decision making
 									</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Evaluation of the governance system's ability to facilitate decision-making
 										processes."</h5>
@@ -6648,7 +6645,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>96. Governance Structure - Diversity and representation within governance</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of diversity across various facets and representation within the governance team."</h5>
 								</div>
@@ -6714,7 +6711,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>97. Policies - Existence and clarity of policies in key areas</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Evaluation of the existence, clarity, and application consistency of policies in
 										key areas"</h5>
@@ -6781,7 +6778,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>98. Policies - Alignment of policies with legal and ethical standards</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the conformity of policies with both legal requirements and ethical standards."</h5>
 								</div>
@@ -6848,7 +6845,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>99. Policies - Effectiveness of policies in guiding SME operations</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the efficiency of policies in steering and directing the operations of the SME."</h5>
 								</div>
@@ -6911,7 +6908,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>100. Policies - Regular review and update of policies</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the consistency and effectiveness of policy review and updating procedures."</h5>
 								</div>
@@ -6976,7 +6973,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 									<h3>101. Compliance and risk management - Adherence to legal and regulatory
 										requirements</h3>
-										<h5>Please select the responses that best suits the statements below</h5>
+										<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the SME's adherence to legal and regulatory obligations."</h5>
 								</div>
@@ -7043,7 +7040,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 									<h3>102. Compliance and risk management - Existence of risk management strategies
 									</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>Assessing the presence and efficacy of risk management strategies implemented.</h5>
 								</div>
@@ -7113,7 +7110,7 @@ Waltergates Tech Innovation SME
 								<div class="quiz-title text-center">
 									<h3>103. Compliance and risk management - Effectiveness of risk management
 										strategies</h3>
-										<h5>Please select the responses that best suits the statements below</h5>
+										<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the efficiency of risk management strategies employed."</h5>
 								</div>
@@ -7181,7 +7178,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>104. Compliance and risk management - History of legal or compliance issues</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessment of the SME's track record concerning legal or compliance matters."</h5>
 								</div>
@@ -7248,7 +7245,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>105. Stakeholder Engagement - Engagement with key stakeholders</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Assessing the involvement of the SME with its primary stakeholders."</h5>
 								</div>
@@ -7314,7 +7311,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>106. Stakeholder Engagement - Transparency towards key stakeholders</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME maintains a high level of transparency with stakeholders, consistently sharing detailed information. Stakeholders generally feel well-informed about the SME's operations, decisions, and performance due to the regular and comprehensive communication of information."</h5>
 
@@ -7380,7 +7377,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>107. Stakeholder Engagement - Responsiveness to stakeholder feedback</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME demonstrates proactive efforts in actively seeking stakeholder feedback and consistently takes action based on this input. Stakeholders feel listened to and notice tangible changes resulting from their feedback."</h5>
 
@@ -7442,7 +7439,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>108. Curriculum design-Relevance to entrepreneurship</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME exhibits a robust emphasis on entrepreneurship, maintaining consistent and high-quality activities, curriculum, and initiatives in this domain. Diverse and multifaceted programs exist to support aspiring entrepreneurs. There are minor aspects where the SME could enhance its relevance to entrepreneurship further."</h5>
 
@@ -7517,7 +7514,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>109. Curriculum design-Comprehensiveness</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME's curriculum is expansive, encompassing nearly all crucial elements of entrepreneurship and innovation. The content's depth and breadth are well-maintained, striking a balanced coverage, with only minor gaps present in certain areas."</h5>
 
@@ -7584,7 +7581,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>110. Curriculum design-Alignment with industry needs</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME's curriculum is highly attuned to industry requirements, comprehensively addressing the majority of skills and knowledge sought after by the industry. While there might be minor gaps, these do not notably impact the graduates' preparedness for the industry upon completion of the program."</h5>
 
@@ -7655,7 +7652,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>111. Curriculum design-Encouragement of innovation</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The curriculum revolves around nurturing innovation, placing a robust emphasis on fostering innovative thinking, creativity, and entrepreneurship. Students are equipped with the essential skills, tools, and mindset required for innovation, and they are presented with ample opportunities to apply and validate their innovative ideas in real-world settings. Moreover, the SME maintains robust connections within the innovation ecosystem, including start-ups, tech companies, and innovation labs, thereby exposing students to contemporary innovation practices and trends."</h5>
 
@@ -7729,7 +7726,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>112. Delivery and Pedagogy - Quality of trainers</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The trainers possess impressive qualifications and boast substantial industry experience, which they seamlessly integrate into their teaching methodologies. They exhibit strong teaching abilities, communicating clearly, possessing a deep understanding of their subject matter, and consistently engaging and motivating students in their learning journey."</h5>
 
@@ -7803,7 +7800,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>113. Delivery and Pedagogy - Use of experiential learning</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME adeptly incorporates experiential learning into its curriculum, ensuring students engage regularly in projects, case studies, and hands-on activities that complement theoretical learning. There's a notable emphasis on applying acquired skills and knowledge within practical contexts, promoting a well-rounded learning experience."</h5>
 
@@ -7877,7 +7874,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>114. Delivery and Pedagogy - Use of digital tools and platforms</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME demonstrates exceptional proficiency in employing digital tools and platforms, seamlessly integrating technology throughout the learning process. These state-of-the-art tools and platforms significantly enhance accessibility, engagement, and the overall effectiveness of learning. Moreover, the SME actively promotes digital literacy and maximizes technology's potential to augment the learning experience."</h5>
 
@@ -7950,7 +7947,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>115. Delivery and Pedagogy - Learner engagement</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"Trainers and learners engage extensively, fostering a high level of interaction within the SME's learning environment. Active participation is encouraged, cultivating a stimulating atmosphere for learning. Diverse engagement strategies, such as group work and interactive tools, are consistently utilized to enhance the learning experience."</h5>
 
@@ -8021,7 +8018,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>116. Assessment and Feedback - Assessment techniques</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The assessment methods employed are diverse and inventive, encompassing both theoretical comprehension and practical skillsets. Consistent and constructive feedback is a norm, offering precise direction for learners to enhance their performance. These assessments are closely aligned with learning objectives, proficiently measuring the understanding and skills of the learners."</h5>
 
@@ -8095,7 +8092,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>117. Assessment and Feedback - Timely and constructive feedback</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"After completing tasks, feedback is consistently delivered promptly, offering detailed comments and constructive criticism. This feedback provides clear guidance for improvement, helping learners comprehend both their strengths and weaknesses effectively."</h5>
 
@@ -8163,7 +8160,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>118. Curriculum Outcome - Curriculum effectiveness</h3>		
-																<h5>Please select the responses that best suits the statements below</h5>
+																<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The curriculum is thorough and proficiently equips learners for entrepreneurship. Overall, the outcomes surpass expectations, showcasing above-average learner performance, successful startup ventures, or strong job readiness among the participants."</h5>
 
@@ -8234,7 +8231,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>119. Curriculum Outcome - Alumni successes and progress</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The program's alumni show minimal to no advancement in their entrepreneurial endeavors, with scarce evidence of successful startups or entrepreneurial initiatives. The alumni network appears weak or non-existent, lacking collaboration, networking opportunities, or support among its members."</h5>
 
@@ -8305,7 +8302,7 @@ Waltergates Tech Innovation SME
 							<div class="wizard-forms">
 								<div class="quiz-title text-center">
 									<h3>120. Curriculum Outcome - Response to industry feedback</h3>
-									<h5>Please select the responses that best suits the statements below</h5>
+									<h5>Please select the responses that best suits the statement below</h5>
 
 									<h5>"The SME highly values industry feedback, utilizing it frequently to enact significant changes in their curriculum or approach. Their training programs demonstrate a strong comprehension of industry needs, and adjustments are made proactively in response to industry trends and feedback."</h5>
 
@@ -8349,7 +8346,6 @@ Waltergates Tech Innovation SME
 										
 										<li><button class="js-btn-next" title="NEXT" type="submit">Submit</button></li>
 
-										<li><span class="save-continue-btn" onclick="saveAndContinue()">Save and Continue</span></li>
 									</ul>
 								</div>
 							</div>
@@ -8359,6 +8355,27 @@ Waltergates Tech Innovation SME
 			</div>
 		</div>
 	</div>
+
+	
+<script>
+  // Function to navigate to different sections based on dropdown selection
+  function navigateToSection() {
+    var selectedValue = document.getElementById("dropdown").value;
+
+    // Hide all sections initially
+    var sections = document.querySelectorAll(".multisteps-form__panel");
+    sections.forEach(section => {
+      section.style.display = "none";
+    });
+
+    // Display the selected section
+    var selectedSection = document.getElementById("section" + selectedValue);
+    if (selectedSection) {
+      selectedSection.style.display = "block";
+    }
+  }
+</script>
+
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
