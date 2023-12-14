@@ -4,6 +4,8 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 
+
+
 router.get("/", (req, res) => {
     res.render("./index.ejs");
 });

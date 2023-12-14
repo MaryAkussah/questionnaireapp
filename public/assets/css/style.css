@@ -245,10 +245,10 @@ multistep css
 }
 .actions li {
   color: #3c3c3c;
-  height: 65px;
-  width: 430px;
+  height: 50px;
+  width: 250px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   text-align: center;
   line-height: 65px;
@@ -257,6 +257,7 @@ multistep css
   background-color: #fff;
   text-transform: uppercase;
   transition: 0.3s all ease-in-out;
+  padding-bottom: 50px;
 }
 .actions li:hover {
   color: #fff;
@@ -270,22 +271,29 @@ multistep css
 .actions li:nth-child(1) {
   float: left;
   margin-right: 150px; /* Adjust the right margin for spacing */
+
+}
+.js-btn-next{
+  border-bottom: 200px;
 }
 .actions li:nth-child(2) {
   float: right;
-  margin-left: 150px; /* Adjust the left margin for spacing */
+  margin-left: 150px; 
+ /* Adjust the left margin for spacing */
 }
 .actions li span, .actions li button {
   width: 100%;
   display: block;
   border: none;
+  padding-bottom: 50px;
+
 }
 
 .save-continue-btn{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   font-size: 16px;
 }
 
@@ -352,14 +360,14 @@ multistep css
 
 .quiz-top-area {
   padding: 20px 0px;
-  background-color: #246677;
+  background-color: #bedef3;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
 .quiz-top-area h1 {
-  color: #fff;
+  color: #273977;
   font-size: 25px;
   margin: 0;
   /* font-weight: bold; */
@@ -677,13 +685,45 @@ multistep css
 ================================================== */
 @media screen and (max-width: 1440px) {
   .actions li {
-    width: 255px;
+    width: 250px;
   }
 
   .quiz-progress-area .progress {
     max-width: 400px;
   }
 }
+
+.actions li:nth-child(2),
+.actions li:nth-child(1) {
+    float: none;
+    margin: 0 auto;
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+  }
+
+  .actions li:nth-child(1) {
+    margin-bottom: 20px;
+  }
+
+  .actions {
+    text-align: center;
+  }
+
+  .quiz-details-option span {
+    font-size: 18px;
+  }
+
+  .save-continue-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 20px; */
+    font-size: 16px;
+  }
+  
 @media screen and (max-width: 991px) {
   .quiz-top-area .quiz-countdown {
     position: static;
@@ -711,6 +751,38 @@ multistep css
     right: -70px;
   }
 }
+
+.actions li:nth-child(2),
+.actions li:nth-child(1) {
+    float: none;
+    margin: 0 auto;
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+  }
+
+  .actions li:nth-child(1) {
+    margin-bottom: 20px;
+  }
+
+  .actions {
+    text-align: center;
+  }
+
+  .quiz-details-option span {
+    font-size: 18px;
+  }
+
+  .save-continue-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 20px; */
+    font-size: 16px;
+  }
+  
 @media screen and (max-width: 580px) {
   .actions li:nth-child(2),
 .actions li:nth-child(1) {
@@ -735,6 +807,14 @@ multistep css
     font-size: 18px;
   }
 }
+.save-continue-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 10px 20px; */
+  font-size: 16px;
+}
+
 @media screen and (max-width: 480px) {
   .quiz-progress-area .progress .progress-bar span {
     display: none;
@@ -771,3 +851,34 @@ multistep css
   }
 }
 /*---------------------------------------------------- */
+.actions li:nth-child(2),
+.actions li:nth-child(1) {
+    float: none;
+    margin: 0 auto;
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+  }
+
+  .actions li:nth-child(1) {
+    margin-bottom: 20px;
+  }
+
+  .actions {
+    text-align: center;
+  }
+
+  .quiz-details-option span {
+    font-size: 18px;
+  }
+
+  .save-continue-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 20px; */
+    font-size: 16px;
+  }
+  
