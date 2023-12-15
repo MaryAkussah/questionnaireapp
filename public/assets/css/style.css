@@ -236,12 +236,15 @@ multistep css
   transition-delay: 0s;
   transform: scale(1);
 }
+.mini{
+  width: 20% !important;
+}
 
 .actions {
   width: 100%;
   border-radius: 4px;
   padding: 20px 30px;
-  background-color: #3c3c3c;
+
 }
 .actions li {
   color: #3c3c3c;
@@ -354,7 +357,7 @@ multistep css
   width: 200px; /* Set your desired width for the logo */
   height: 100px;
   margin-right: 10px; /* Adjust margin between logo and text */
-  
+   
 }
 
 
