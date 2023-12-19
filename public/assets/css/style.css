@@ -237,7 +237,7 @@ multistep css
   transform: scale(1);
 }
 .mini{
-  width: 20% !important;
+  width: 15% !important;
 }
 
 .actions {
@@ -246,6 +246,13 @@ multistep css
   padding: 20px 30px;
 
 }
+
+/* Define a style for answered links */
+.page-item.mini .page-link.answered {
+  color: green; /* Change this color to the color you prefer */
+  /* You can add more styles as needed */
+}
+
 .actions li {
   color: #3c3c3c;
   height: 50px;
@@ -267,18 +274,19 @@ multistep css
   background-color: #eb3252;
 }
 .actions li button {
-  color: #fff;
-  background-color: #eb3252;
+  color: #000000 ;
+  background-color: #ffffff;
   font-weight: bold;
+  text-align: center;
 }
 .actions li:nth-child(1) {
   float: left;
   margin-right: 150px; /* Adjust the right margin for spacing */
 
 }
-.js-btn-next{
+/* .js-btn-next{
   border-bottom: 200px;
-}
+} */
 .actions li:nth-child(2) {
   float: right;
   margin-left: 150px; 
@@ -319,8 +327,8 @@ multistep css
   background-image: linear-gradient(14deg, #eb3252 0%, #f82c28 100%);
 }
 .quiz-progress-area .progress .progress-bar span {
-  top: -65px;
-  width: 275px;
+  /* top: -65px; */
+  width: 260px;
   height: 40px;
   line-height: 40px;
   position: absolute;
@@ -354,25 +362,24 @@ multistep css
 }
 
 .quiz-top-area .logo {
-  width: 200px; /* Set your desired width for the logo */
-  height: 100px;
-  margin-right: 10px; /* Adjust margin between logo and text */
+  width: 400px; /* Set your desired width for the logo */
+  height: 250px;
    
 }
 
 
 .quiz-top-area {
-  padding: 20px 0px;
+  padding: 0px 0px;
   background-color: #bedef3;
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: row; */
 }
 .quiz-top-area h1 {
   color: #273977;
-  font-size: 25px;
-  margin: 0;
+  font-size: 35px;
+  padding-bottom: 30px;
   /* font-weight: bold; */
 }
 .quiz-top-area .quiz-countdown {
@@ -884,4 +891,4 @@ multistep css
     /* padding: 10px 20px; */
     font-size: 16px;
   }
-  
+ 

@@ -4,6 +4,128 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 
+const QUESTIONS = {
+    revenue_sources: "Question 1",
+    diversification: "Question 2",
+    financial_strategy: "Question 3",
+    budget_management: "Question 4",
+    financial_reporting: "Question 5",
+    grant_acquisition: "Question 6",
+    investor_attraction: "Question 7",
+    reserves_and_continuity: "Question 8",
+    sustainability_plan: "Question 9",
+    clear_vision_and_mission: "Question 10",
+    defined_strategic_goals: "Question 11",
+    alignment_with_market_trends: "Question 12",
+    innovation_driven_strategy: "Question 13",
+    implementation_plan_and_execution: "Question 14",
+    resource_allocation: "Question 15",
+    monitoring_and_control_mechanisms: "Question 16",
+    responsiveness_to_changes: "Question 17",
+    regular_review_and_update_of_strategy: "Question 18",
+    performance_against_strategic_goals: "Question 19",
+    use_of_feedback_in_strategic_revision: "Question 20",
+    stakeholder_identification: "Question 21",
+    stakeholder_engagement_in_strategy: "Question 22",
+    responsiveness_to_stakeholder_feedback: "Question 23",
+    clarity_of_leadership_roles: "Question 24",
+    effectiveness_of_leadership: "Question 25",
+    transparency_and_accountability_in_governance: "Question 26",
+    inclusiveness_in_decisionmaking_process: "Question 27",
+    staff_motivation_and_morale: "Question 28",
+    staff_competence: "Question 29",
+    clear_job_description_and_role_expectations: "Question 30",
+    ongoing_training_and_development: "Question 31",
+    efficiency_of_operations: "Question 32",
+    quality_control_system: "Question 33",
+    technology_use: "Question 34",
+    risk_management: "Question 35",
+    performance_evaluation: "Question 36",
+    performance_feedback: "Question 37",
+    reward_recognition: "Question 38",
+    services_offered: "Question 39",
+    service_relevance: "Question 40",
+    service_innovativeness: "Question 41",
+    service_quality: "Question 42",
+    service_timeliness: "Question 43",
+    service_responsiveness: "Question 44",
+    service_accessibility: "Question 45",
+    technology_service_delivery: "Question 46",
+    service_impact: "Question 47",
+    feedback_utilization: "Question 48",
+    service_review: "Question 49",
+    startups_supported: "Question 50",
+    job_creation: "Question 51",
+    revenue_growth: "Question 52",
+    novel_solutions: "Question 53",
+    patents_ips: "Question 54",
+    rd_initiatives: "Question 55",
+    local_economy_contribution: "Question 56",
+    community_engagement: "Question 57",
+    partnerships_collaborations: "Question 58",
+    startup_sustainability: "Question 59",
+    long_term_value_creation: "Question 60",
+    strategic_vision: "Question 61",
+    working_space: "Question 62",
+    comfort_ambiance: "Question 63",
+    accessibility_wheelchair: "Question 64",
+    safety_equipment: "Question 65",
+    internet_connection: "Question 66",
+    necessary_hardware: "Question 67",
+    software_tools_availability: "Question 68",
+    power_reliability: "Question 69",
+    security_measures: "Question 70",
+    meeting_rooms: "Question 71",
+    event_space: "Question 72",
+    av_equipment_quality: "Question 73",
+    kitchen_facilities: "Question 74",
+    relaxation_recreation: "Question 75",
+    cleanliness_maintenance: "Question 76",
+    fulltime_staff: "Question 77",
+    staff_qualifications: "Question 78",
+    staff_turnover: "Question 79",
+    staff_training: "Question 80",
+    local_partners: "Question 81",
+    local_partnership_quality: "Question 82",
+    collaboration_outcome: "Question 83",
+    intl_partners: "Question 84",
+    intl_partners_quality: "Question 85",
+    intl_collaboration_outcome: "Question 86",
+    network_participation: "Question 87",
+    international_network_participation: "Question 88",
+    network_benefits: "Question 89",
+    alumni_network: "Question 90",
+    alumni_engagement: "Question 91",
+    alumni_success_stories: "Question 92",
+    governance_structure: "Question 93",
+    roles_responsibilities: "Question 94",
+    decision_making: "Question 95",
+    diversity_representation: "Question 96",
+    existence_clarity_policies: "Question 97",
+    alignment_legal_ethical_policies: "Question 98",
+    effectiveness_policies_operations: "Question 99",
+    review_update_policies: "Question 100",
+    compliance_legal_requirements: "Question 101",
+    risk_management_strategies: "Question 102",
+    risk_management_effectiveness: "Question 103",
+    legal_compliance_history: "Question 104",
+    stakeholder_engagement: "Question 105",
+    transparency_stakeholders: "Question 106",
+    responsiveness_feedback: "Question 107",
+    curriculum_entrepreneurship: "Question 108",
+    curriculum_comprehensiveness: "Question 109",
+    curriculum_alignment: "Question 110",
+    curriculum_innovation: "Question 111",
+    quality_of_trainers: "Question 112",
+    experiential_learning: "Question 113",
+    digital_tools_platforms: "Question 114",
+    learner_engagement: "Question 115",
+    assessment_techniques: "Question 116",
+    feedback_quality: "Question 117",
+    curriculum_effectiveness: "Question 118",
+    alumni_successes: "Question 119",
+    industry_feedback: "Question 120"
+}
 
 
 router.get("/", (req, res) => {
@@ -84,10 +206,8 @@ router.post("/submit-response", async (req, res) => {
             rd_initiatives: req.body.rd_initiatives
         }
 
-        const createdResponseSectionOneData = await prisma.responseSectionOne.create({
-            data: responseSectionOneData,
-        });
-
+        const nullValuesSectionOne = checkForNullValues(responseSectionOneData);
+        
         const responseSectionTwoData = {
             responseMainId: createdResponseMain.id,
             local_economy_contribution: req.body.local_economy_contribution,
@@ -156,10 +276,29 @@ router.post("/submit-response", async (req, res) => {
             alumni_successes: req.body.alumni_successes,
             industry_feedback: req.body.industry_feedback
         }
-
+        
+        const nullValuesSectionTwo = checkForNullValues(responseSectionTwoData);
+        const nullValues = [...nullValuesSectionOne, ...nullValuesSectionTwo]
+        //console.log('\n\n\n SECTION1',responseSectionOneData, '\n\n\n SECTION2', responseSectionTwoData);
+        //console.log(nullValues);
+        const unansweredQuestions = [];
+        nullValues.forEach(key => {
+            if (QUESTIONS.hasOwnProperty(key)) {
+                unansweredQuestions.push(QUESTIONS[key]);
+            }});
+        if (nullValues.length > 0) {
+            //console.log('The following questions were not answered:', nullValues);
+            //res.json({status: 'error', error: 'At least one question wasn\'t answered'  + error.message})
+            res.json({issue:'Unanswered Questions', message: 'These questions are to be answered: ' + unansweredQuestions.join(', ')});
+            
+        }
+        const createdResponseSectionOneData = await prisma.responseSectionOne.create({
+                data: responseSectionOneData,
+            });
         const createdResponseSectionTwoData = await prisma.responseSectionTwo.create({
-            data: responseSectionTwoData,
-        });
+                data: responseSectionTwoData,
+            });
+        
 
         // Update user
         const updateResponseMain = await prisma.responseMain.update({
@@ -175,13 +314,26 @@ router.post("/submit-response", async (req, res) => {
         res.redirect('/thank-you')
 
     } catch (error) {
-        console.log(`Try catch error====>>> ${error}`)
+        // res.send('An error occured: ' + error);
+        res.json({status: 'error', message: 'At least one question wasn\'t answered'  + error.message})
+        //console.log(`Try catch error====>>> ${error}`)
     }
 });
 
 router.get('/thank-you', (req, res) => {
     res.render('./thank-you.ejs')
 })
+
+function checkForNullValues(obj) {
+    const nullKeys = [];
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key) && obj[key] === null || obj[key] === undefined) {
+        nullKeys.push(key);
+      }
+    }
+    return nullKeys;
+  }
+
 
 module.exports = router;
 
