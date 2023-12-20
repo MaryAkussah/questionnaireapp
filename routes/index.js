@@ -134,7 +134,7 @@ router.get("/", (req, res) => {
 
 router.post("/submit-response", async (req, res) => {
     console.table(req.body);
-    try {
+  
         const responseMainData = {
             email_address: req.body.email_address,
             applicant_name: req.body.applicant_name,
@@ -276,22 +276,42 @@ router.post("/submit-response", async (req, res) => {
             alumni_successes: req.body.alumni_successes,
             industry_feedback: req.body.industry_feedback
         }
-        
+
         const nullValuesSectionTwo = checkForNullValues(responseSectionTwoData);
-        const nullValues = [...nullValuesSectionOne, ...nullValuesSectionTwo]
-        //console.log('\n\n\n SECTION1',responseSectionOneData, '\n\n\n SECTION2', responseSectionTwoData);
-        //console.log(nullValues);
-        const unansweredQuestions = [];
-        nullValues.forEach(key => {
-            if (QUESTIONS.hasOwnProperty(key)) {
-                unansweredQuestions.push(QUESTIONS[key]);
-            }});
-        if (nullValues.length > 0) {
-            //console.log('The following questions were not answered:', nullValues);
-            //res.json({status: 'error', error: 'At least one question wasn\'t answered'  + error.message})
-            res.json({issue:'Unanswered Questions', message: 'These questions are to be answered: ' + unansweredQuestions.join(', ')});
-            
+
+        // Function to handle form submission and check for null values
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Check for null values in each section
+    const hasNullValues = checkForNullValues();
+
+    // If any section contains null values, prevent form submission
+    if (hasNullValues) {
+        alert('Please fill in all sections.'); // Display an alert or message
+    } else {
+        // If no null values found, submit the form
+        document.getElementById('mainForm').submit();
+    }
+}
+
+// Attach the handleSubmit function to the form submit event
+document.getElementById('mainForm').addEventListener('submit', handleSubmit);
+
+// Your function to check for null values
+function checkForNullValues() {
+    for (let i = 1; i <= 120; i++) {
+        const section = document.getElementById(`section${i}`);
+        if (!section || !section.textContent.trim()) {
+            return true; // Return true if any section is null or empty
         }
+    }
+    return false; // Return false if all sections have content
+}
+
+
+
+
         const createdResponseSectionOneData = await prisma.responseSectionOne.create({
                 data: responseSectionOneData,
             });
@@ -313,11 +333,7 @@ router.post("/submit-response", async (req, res) => {
 
         res.redirect('/thank-you')
 
-    } catch (error) {
-        // res.send('An error occured: ' + error);
-        res.json({status: 'error', message: 'At least one question wasn\'t answered'  + error.message})
-        //console.log(`Try catch error====>>> ${error}`)
-    }
+    
 });
 
 router.get('/thank-you', (req, res) => {

@@ -253,6 +253,10 @@ multistep css
   /* You can add more styles as needed */
 }
 
+.answered {
+  background-color: lightgreen; /* Change this color as needed */
+}
+
 .actions li {
   color: #3c3c3c;
   height: 50px;
