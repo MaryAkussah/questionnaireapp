@@ -279,36 +279,7 @@ router.post("/submit-response", async (req, res) => {
 
         const nullValuesSectionTwo = checkForNullValues(responseSectionTwoData);
 
-        // Function to handle form submission and check for null values
-function handleSubmit(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    // Check for null values in each section
-    const hasNullValues = checkForNullValues();
-
-    // If any section contains null values, prevent form submission
-    if (hasNullValues) {
-        alert('Please fill in all sections.'); // Display an alert or message
-    } else {
-        // If no null values found, submit the form
-        document.getElementById('mainForm').submit();
-    }
-}
-
-// Attach the handleSubmit function to the form submit event
-document.getElementById('mainForm').addEventListener('submit', handleSubmit);
-
-// Your function to check for null values
-function checkForNullValues() {
-    for (let i = 1; i <= 120; i++) {
-        const section = document.getElementById(`section${i}`);
-        if (!section || !section.textContent.trim()) {
-            return true; // Return true if any section is null or empty
-        }
-    }
-    return false; // Return false if all sections have content
-}
-
+        
 
 
 
