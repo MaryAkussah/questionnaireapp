@@ -206,7 +206,7 @@ router.post("/submit-response", async (req, res) => {
             rd_initiatives: req.body.rd_initiatives
         }
 
-        const nullValuesSectionOne = checkForNullValues(responseSectionOneData);
+       // const nullValuesSectionOne = checkForNullValues(responseSectionOneData);
         
         const responseSectionTwoData = {
             responseMainId: createdResponseMain.id,
@@ -277,11 +277,7 @@ router.post("/submit-response", async (req, res) => {
             industry_feedback: req.body.industry_feedback
         }
 
-        const nullValuesSectionTwo = checkForNullValues(responseSectionTwoData);
-
-        
-
-
+        // const nullValuesSectionTwo = checkForNullValues(responseSectionTwoData);
 
         const createdResponseSectionOneData = await prisma.responseSectionOne.create({
                 data: responseSectionOneData,
@@ -311,15 +307,15 @@ router.get('/thank-you', (req, res) => {
     res.render('./thank-you.ejs')
 })
 
-function checkForNullValues(obj) {
-    const nullKeys = [];
-    for (const key in obj) {
-      if (obj.hasOwnProperty(key) && obj[key] === null || obj[key] === undefined) {
-        nullKeys.push(key);
-      }
-    }
-    return nullKeys;
-  }
+// function checkForNullValues(obj) {
+//     const nullKeys = [];
+//     for (const key in obj) {
+//       if (obj.hasOwnProperty(key) && obj[key] === null || obj[key] === undefined) {
+//         nullKeys.push(key);
+//       }
+//     }
+//     return nullKeys;
+//   }
 
 
 module.exports = router;
