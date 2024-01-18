@@ -277,6 +277,8 @@ router.post("/submit-response", async (req, res) => {
             industry_feedback: req.body.industry_feedback
         }
 
+
+        
         // const nullValuesSectionTwo = checkForNullValues(responseSectionTwoData);
 
         const createdResponseSectionOneData = await prisma.responseSectionOne.create({
